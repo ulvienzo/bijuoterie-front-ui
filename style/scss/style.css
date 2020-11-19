@@ -1,0 +1,210 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: yellow;
+}
+
+.banner {
+    display: none;
+}
+
+body {
+    font-size: 100px !important;
+}
+
+@media screen and (min-width: 800px) {
+    .banner {
+        display: block;
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100vw;
+    }
+    .banner .banner__container {
+        width: 100%;
+    }
+    .banner .banner__container .banner__wrapper {
+        display: flex;
+        flex-direction: row;
+        width: inherit;
+    }
+    .banner .banner__container .banner__wrapper .banner__item {
+        position: relative;
+        width: 20%;
+        overflow: hidden;
+        cursor: pointer;
+    }
+}
+
+@media screen and (min-width: 800px) and (min-width: 1260px) {
+    .banner .banner__container .banner__wrapper .banner__item:hover .banner__href::before {
+        background-color: rgba(255, 255, 255, 0.8);
+        width: 100%;
+        height: 100%;
+    }
+    .banner .banner__container .banner__wrapper .banner__item:hover .banner__caption {
+        transform: translateX(0%);
+        transition: all 0.3s ease;
+    }
+    .banner .banner__container .banner__wrapper .banner__item .banner__caption {
+        transform: translateX(-100%);
+        transition: all 0.3s ease;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .banner .banner__container .banner__wrapper .banner__item .banner__href {
+        height: 100%;
+        width: 100%;
+        cursor: pointer;
+        display: block;
+    }
+    .banner .banner__container .banner__wrapper .banner__item .banner__href::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        transition: all 0.3s ease;
+    }
+    .banner .banner__container .banner__wrapper .banner__item .banner__href .banner__image {
+        width: 100%;
+        height: auto;
+    }
+    .banner .banner__container .banner__wrapper .banner__item .banner__caption {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 50% 0;
+    }
+    .banner .banner__container .banner__wrapper .banner__item .banner__caption .caption__head {
+        font-size: 30px;
+        color: #000;
+        font-family: "Frank Ruhl Libre", serif;
+        font-weight: 600;
+        margin-top: 0;
+        margin-bottom: 5px;
+        cursor: text;
+    }
+    .banner .banner__container .banner__wrapper .banner__item .banner__caption .caption__href {
+        font-size: 14px;
+        font-family: "Poppins", sans-serif;
+        letter-spacing: 0.2em;
+        color: brown;
+        border-bottom: 1px solid #000;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+    .banner .banner__container .banner__wrapper .banner__item .banner__caption .caption__href:hover {
+        color: #DE784C;
+        border-bottom: 1px solid #DE784C;
+    }
+}
+
+.header__content {
+    position: relative;
+    height: 145px;
+    align-items: center;
+    background-color: black;
+}
+
+.header__content .header__content__wrapper .logo__wrapper {
+    display: inline-block;
+}
+
+.header__content .header__content__wrapper .logo__wrapper #logo__href #logo {
+    max-height: 130px;
+    transition: all 0.3s ease;
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+}
+
+.header__content .navbar__wrapper {
+    display: inline-block;
+}
+
+.header__content .navbar__wrapper .navbar__menu .navbar__content .navbar__item {
+    display: inline-block;
+    padding: 0.7rem 1rem;
+}
+
+.header__content .navbar__wrapper .navbar__menu .navbar__content .navbar__href {
+    color: #060606;
+    font-size: 18px;
+    text-decoration: none;
+    padding-top: 30px;
+    cursor: pointer;
+    list-style: none;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    padding-bottom: 30px;
+    font-family: "Frank Ruhl Libre", serif;
+    text-transform: uppercase;
+}
+
+.header__content .navbar__wrapper .navbar__menu .navbar__content .navbar__href:hover {
+    color: #DE784C;
+}
+
+.header__content .right__icons__wrapper {
+    position: relative;
+    font-size: 18px;
+    padding: 10px;
+    display: inline-block;
+}
+
+.header__content .right__icons__wrapper .user__currency {
+    display: inline-block;
+}
+
+.header__content .right__icons__wrapper .user__currency .currency__dropdown {
+    color: #060606;
+    font-weight: 500;
+    background-color: transparent;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-family: "Frank Ruhl Libre", serif;
+    cursor: pointer;
+    border: none;
+}
+
+.header__content .right__icons__wrapper .user__currency .currency__dropdown option::selection {
+    border: none;
+}
+
+.header__content .right__icons__wrapper .user__currency .currency__dropdown option:hover {
+    color: #DE784C;
+}
+
+.header__content .right__icons__wrapper .user__search {
+    display: inline-block;
+}
+
+.header__content .right__icons__wrapper .user__search .fa-search {
+    cursor: auto;
+}
+
+.header__content .right__icons__wrapper .user__account {
+    display: inline-block;
+}
+
+.header__content .right__icons__wrapper .user__account .fa-user {
+    cursor: auto;
+}
+
+.header__content .right__icons__wrapper .user__cart {
+    display: inline-block;
+}
+
+.header__content .right__icons__wrapper .user__cart .fa-shopping-bag {
+    cursor: auto;
+}
+
+
+/*# sourceMappingURL=style.css.map */

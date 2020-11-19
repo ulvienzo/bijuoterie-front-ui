@@ -1,0 +1,86 @@
+.banner {
+    @include display(none);
+}
+
+@media screen and (min-width:$breakpoint-middle) {
+    .banner {
+        @include display(block);
+        @include position(relative, 0, 0, "", 0);
+        @include width-height(100vw, "");
+        line-height: 0;
+        .banner__container {
+            @include width-height(100%, "");
+            .banner__wrapper {
+                @include flex(flex, row, "", "", "");
+                @include width-height(inherit, "");
+                .banner__item {
+                    @include position(relative, "", "", "", "");
+                    @include overflow(hidden);
+                    @include width-height(20%, "");
+                    @media screen and (min-width: $breakpoint-regular) {
+                        &:hover {
+                            .banner__href {
+                                &::before {
+                                    @include width-height(100%, 100%);
+                                    background-color: rgba($white, 0.8);
+                                }
+                            }
+                            .banner__caption {
+                                transform: translateX(0%);
+                                transition: $standart-transition;
+                            }
+                        }
+                        .banner__caption {
+                            transform: translateX(-100%);
+                            transition: $standart-transition;
+                        }
+                    }
+                    .banner__href {
+                        @include width-height(100%, 100%);
+                        @include display(block);
+                        &::before {
+                            content: "";
+                            @include width-height(100%, 100%);
+                            @include position($position-free, 0, "", "", 0);
+                            transition: $standart-transition;
+                        }
+                        .banner__image {
+                            @include width-height(100%, auto);
+                        }
+                    }
+                    .banner__caption {
+                        @include position($position-free, 0, "", "", 0);
+                        @include overflow(hidden);
+                        @include text-align(center);
+                        @include width-height(100%, "");
+                        padding: 50% 0;
+                        .caption__head {
+                            @include typography($sec-font, $fsize-md, $bold-weight, $black);
+                            margin-bottom: 0 0 1.5*$fsize-md 0;
+                        }
+                        .caption__href {
+                            @include position(relative, "", "", "", "");
+                            @include typography($main-font, $fsize-main, $thin-weight, $black);
+                            @include text-transform(uppercase);
+                            &:hover {
+                                @include typography($main-font, $fsize-main, $thin-weight, $main-color);
+                            }
+                            &::before,
+                            &::after {
+                                content: "";
+                                @include position(absolute, $fsize-main/2+2, 100%, "", "");
+                                @include width-height(15vw, 1px);
+                                @include color-background("", $black);
+                                opacity: $opacity-low;
+                            }
+                            &::after {
+                                content: "";
+                                @include position(absolute, $fsize-main/2+2, "", "", 100%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

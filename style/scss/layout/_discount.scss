@@ -1,0 +1,81 @@
+.discount__poster {
+    padding: 6*$padding-md 0;
+    .poster__wrapper {
+        @include position(relative, "", "", "", "");
+        @include overflow(hidden);
+        margin-bottom: 2*$margin-md;
+        .poster__href {
+            @include position(relative, "", "", "", "");
+            @include display (block);
+            .poster__img {
+                @include width-height(100%, "");
+            }
+            .title {
+                @include centering;
+                @include typography($sec-font, $fsize-xl, $bold-weight, $white);
+                @include text-align(center);
+                padding: 0 $padding-md-plus;
+                z-index: $zet-sm;
+            }
+            .circle {
+                @include centering;
+                @include width-height($width-md-plus, $height-md-plus);
+                @include color-background("", $main-color);
+                @include border("", "", "", 50%);
+                opacity: $opacity-high;
+            }
+        }
+        .poster__content {
+            @include color-background("", $main-color-light);
+            @include width-height(100%, "");
+            @include typography($sec-font, $fsize-xs*2, $weight, $white);
+            @include text-align(center);
+            margin-bottom: 0;
+            padding: $padding-lg 0;
+        }
+        @media screen and (min-width:$breakpoint-middle) {
+            .effects {
+                @include position($position-free, 0, "", "", 0);
+                @include width-height(100%, 100%);
+                z-index: $zet-big;
+                transition: $lazy-transition;
+                .effect {
+                    @include width-height(0, 0);
+                    @include color-background("", $alpha-mid);
+                    transition: $lazy-transition;
+                }
+                .effect__1 {
+                    @include position($position-free, 0, "", "", 0);
+                }
+                .effect__2 {
+                    @include position($position-free, "", "", 0, 0);
+                }
+                .effect__3 {
+                    @include position($position-free, "", 0, 0, "");
+                }
+                .effect__4 {
+                    @include position($position-free, 0, 0, "", "");
+                }
+            }
+            &:hover {
+                .effect__1,
+                .effect__2,
+                .effect__3,
+                .effect__4 {
+                    @include width-height(50%, 50%);
+                    transition: $standart-transition;
+                }
+            }
+        }
+    }
+    .shop__discount {
+        @include text-decoration(none);
+        @include text-align(center);
+        @include color-background($main-icon-color, "");
+        @include text-transform(uppercase);
+        .title {
+            @include typography($main-font, $fsize-main, $thin-weight, $color);
+            padding-top: $padding-md;
+        }
+    }
+}

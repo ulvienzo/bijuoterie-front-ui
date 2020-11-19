@@ -1,0 +1,46 @@
+.instagrammer {
+    padding: $padding-xl*2 - 10px 0;
+    @include position(relative, "", "", "", "");
+    .column {
+        @include width-height(100%, "");
+        @include flex(flex, row, center, "", "");
+    }
+    @media screen and (min-width:$breakpoint-middle) {
+        .column {
+            @include width-height(50%, "");
+        }
+    }
+    .insta__photo {
+        @include display(inline-block);
+        @include overflow(hidden);
+        width: calc(100% / 3);
+        .insta__img {
+            @include width-height(100%, auto);
+            transition: $lazy-transition;
+            object-fit: cover;
+        }
+        &:hover {
+            .insta__img {
+                transform: scale(1.2);
+            }
+        }
+    }
+    .insta__img-down {
+        margin-top: $margin-lg-plus + 10px;
+    }
+    .content {
+        @include text-align(center);
+        @include margin-auto;
+        margin-top: $margin-xl;
+        h6 {
+            @include color-background($main-dark-color, "");
+            @include typography($sec-font, $fsize-stand + 6px, $weight, $color);
+            margin-bottom: $margin-md;
+        }
+        span {
+            @include color-background($main-color, "");
+            font-size: $fsize-stand;
+            font-style: italic;
+        }
+    }
+}

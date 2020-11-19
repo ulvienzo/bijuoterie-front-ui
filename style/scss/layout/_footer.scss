@@ -1,0 +1,136 @@
+.footer {
+    @include color-background($navigation-light, $second-bg);
+    @include flex(flex, column, "", center, wrap);
+    @include position(relative, "", "", "", "");
+    padding: $padding-xl 0;
+    &::after {
+        content: "";
+        @include position(absolute, "", "", 0, "");
+        @include width-height(100%, 1px);
+        @include color-background("", $secondary-iconics);
+    }
+    .logo {
+        @include overflow(hidden);
+        @include display(inline-block);
+        margin-bottom: $margin-lg-plus;
+        img {
+            @include display(block);
+            @include centering;
+            @include margin-auto;
+            @include width-height("", 100%);
+            object-fit: cover;
+        }
+    }
+    .footer__nav {
+        @include text-transform(capitalize);
+        ul {
+            @include flex(flex, column, "", "", "");
+            .nav__item {
+                @include text-align(center);
+                margin: $margin-md 2*$margin-md;
+                list-style: none;
+                a {
+                    @include color-background($navigation-light, "");
+                    @include typography($sec-font, $fsize-stand+2px, $bold-weight, "");
+                    @include text-decoration(none);
+                    &:hover {
+                        @include color-background($main-color, "");
+                    }
+                }
+            }
+        }
+    }
+    .subscribe__wrapper {
+        @include position(relative, "", "", "", "");
+        @include width-height(100%, "");
+        .subscribe {
+            @include position(relative, "", "", "", "");
+            @include margin-auto;
+            @include width-height($width-lg, "");
+            .newsteller {
+                @include display(block);
+                @include width-height("", $fsize-xs*4);
+                @include border($border-width-md, solid, $main-color, "");
+                @include color-background($navigation-light, transparent);
+                @include typography($font, $size, $weight, $color);
+                padding: $padding-min $padding-md-plus 0;
+                line-height: $fsize-md;
+                font-size: $fsize-stand + 2px;
+                font-family: $sec-font;
+                box-shadow: none;
+                &::placeholder {
+                    color: $navigation-light;
+                }
+                @include outline-none;
+            }
+            .enveloper {
+                @include position(absolute, -1*$pos-xs*2, -1*$pos-xl*2, "", "");
+                @include color-background($navigation-light, "");
+                @include display(inline-block);
+                @include width-height("", $fsize-lg - 8px);
+                @include typography($font, $fsize-md+2, $weight, $color);
+                transition: $standart-transition;
+                &:hover {
+                    @include color-background($main-color, "");
+                }
+            }
+        }
+    }
+    @media screen and (min-width:$breakpoint-middle) {
+        .footer__nav {
+            ul {
+                @include flex(flex, row, center, "", "");
+            }
+        }
+    }
+}
+
+.footer__bottom {
+    @include flex(flex, column, center, "", "");
+    .social__network {
+        @include flex(flex, row, center, "", "");
+        margin-bottom: $margin-lg-plus;
+        .social__network-items {
+            @include width-height($width-xs, $height-xs);
+            @include border($border-width-sm, solid, $main-icon-color, 50%);
+            @include text-align(center);
+            @include color-background($main-icon-color, "");
+            margin: 0 $margin-min*3;
+            &:hover {
+                @include color-background($navigation-light, $main-color);
+                @include border($border-width-sm, solid, $main-color, 50%);
+            }
+            i {
+                font-size: $fsize-xs;
+                transform: translateY(-3px);
+            }
+        }
+    }
+    .copyright {
+        margin-bottom: $margin-lg-plus;
+    }
+    .payment__cards {
+        @include display(block);
+        @include margin-auto;
+    }
+}
+
+@media screen and (min-width:$breakpoint-central) {
+    .footer {
+        @include flex(flex, row, space-evenly, center, wrap);
+        .footer__nav {
+            ul {
+                flex-direction: row;
+            }
+        }
+        .subscribe__wrapper {
+            @include width-height(auto, "");
+        }
+    }
+    .footer__bottom {
+        @include flex(flex, row, space-evenly, "", wrap);
+        .payment__cards {
+            margin: 0;
+        }
+    }
+}

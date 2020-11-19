@@ -1,0 +1,89 @@
+.reviewer {
+    padding-top: 50px;
+    .item__wrapper {
+        .director {
+            font-family: $sec-font;
+            font-size: $fsize-stand;
+            margin-bottom: 16px;
+        }
+        .reviewer__img-wrapper {
+            position: relative;
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            border: 3px solid $second-btn;
+            margin: 0 auto;
+            margin-top: 90px;
+            margin-bottom: 20px;
+            &::after {
+                content: '';
+                position: absolute;
+                height: 36px;
+                width: 1px;
+                background-color: #000000;
+                position: absolute;
+                top: -50px;
+                left: 50%;
+                transform: translate(-50%, 0);
+            }
+            .reviewer__img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .content {
+            position: relative;
+            margin: 0 auto;
+            text-align: center;
+            .reviewer__content {
+                position: relative;
+                font-style: italic;
+                font-family: $main-font;
+                font-size: $fsize-main;
+                padding: 50px 70px;
+                color: $main-dark-color;
+                &::before {
+                    content: '"';
+                    position: absolute;
+                    left: -40px;
+                    font-size: 15rem;
+                    opacity: 0.3;
+                    font-family: Georgia, 'Times New Roman', Times, serif;
+                }
+                &::after {
+                    content: '"';
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    font-size: 15rem;
+                    opacity: 0.3;
+                    font-family: Georgia, 'Times New Roman', Times, serif;
+                }
+            }
+        }
+        @media screen and (min-width:800px) {
+            .content {
+                margin: 0 auto;
+                padding-left: 170px;
+                padding-right: 170px;
+                .reviewer__content {
+                    font-size: $fsize-main+2px;
+                }
+            }
+        }
+    }
+    .owl-dots {
+        .owl-dot {
+            zoom: 0.8;
+            span {
+                background-color: transparent;
+            }
+        }
+        .active {
+            span {
+                background-color: $main-color !important;
+            }
+        }
+    }
+}

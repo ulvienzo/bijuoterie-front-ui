@@ -1,0 +1,148 @@
+//-----------------------------------------------//
+//===============TYPOGRAPHY======================//
+//-----------------------------------------------//
+@mixin typography($font, $size, $weight, $color) {
+    font-family: $font;
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+}
+
+//-----------------------------------------------//
+//=====================TEXT======================//
+//-----------------------------------------------//
+@mixin text-transform($type) {
+    text-transform: $type;
+}
+
+@mixin text-align($align) {
+    text-align: $align;
+}
+
+@mixin text-decoration($type) {
+    text-decoration: $type;
+}
+
+//-----------------------------------------------//
+//=====================OVERFLOW===================//
+//-----------------------------------------------//
+@mixin overflow($type) {
+    overflow: $type;
+}
+
+//-----------------------------------------------//
+//===================MARGIN-AUTO===================//
+//-----------------------------------------------//
+@mixin margin-auto {
+    margin: 0 auto;
+}
+
+//-----------------------------------------------//
+//=====================FLEX======================//
+//-----------------------------------------------//
+@mixin flex($display, $direction, $justify, $align, $wrap) {
+    display: $display;
+    flex-flow: $direction $wrap;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin flexrow {
+    display: flex;
+    flex-direction: row;
+}
+
+//-----------------------------------------------//
+//====================POSITION===================//
+//-----------------------------------------------//
+@mixin position($position, $top, $right, $bottom, $left) {
+    position: $position;
+    top: $top;
+    bottom: $bottom;
+    left: $left;
+    right: $right;
+}
+
+//-----------------------------------------------//
+//====================COLOR======================//
+//-----------------------------------------------//
+@mixin color-background($color, $background) {
+    color: $color;
+    background-color: $background;
+}
+
+//-----------------------------------------------//
+//====================BORDERS====================//
+//-----------------------------------------------//
+@mixin border($width, $style, $color, $radius) {
+    border-width: $width;
+    border-style: $style;
+    border-color: $color;
+    border-radius: $radius;
+}
+
+//-----------------------------------------------//
+//====================WIDTH-HEIGHT===============//
+//-----------------------------------------------//
+@mixin width-height($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+//-----------------------------------------------//
+//===================Extend Type Mixins==========//
+//-----------------------------------------------//
+//---Outline-none while Focus
+@mixin outline-none {
+    &:focus {
+        outline: none;
+    }
+}
+
+//---Full Position
+@mixin fullposition {
+    @include position($position-free, 0, 0, 0, 0);
+}
+
+//---TEXT
+//---Display
+@mixin display($type) {
+    display: $type;
+}
+
+@mixin swiperarrow {
+    position: absolute;
+    top: 28%;
+    font-size: 3*$fsize-stand;
+}
+
+@mixin sectionheader-mobile {
+    text-align: center;
+    font-size: $fsize-md;
+    font-family: $sec-font;
+    color: $main-dark-color;
+}
+
+@mixin centering {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin searcherbutton {
+    background-color: transparent;
+    width: 50%;
+    font-weight: 500;
+    font-size: 14px;
+    border: none;
+    padding: 5px 0px;
+    border-right: 1px solid rgba(126, 126, 126, 0.082);
+    border-bottom: 1px solid rgba(126, 126, 126, 0.315);
+}
+
+@mixin mobile-icons {
+    padding: 0px 10px;
+    font-size: 24px;
+    color: $main-icon-color;
+}

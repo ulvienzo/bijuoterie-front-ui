@@ -1,0 +1,79 @@
+.media {
+    @include width-height(100vw, 0);
+    .media__wrapper {
+        .overlay {
+            @include display(none);
+            @include position(fixed, 0, 0, 0, 0);
+            @include color-background("", $dark-alter-color);
+            @include width-height(100%, 100%);
+            overflow-y: scroll;
+            z-index: $zet-md;
+            .video__wrapper {
+                @include position(absolute, 50%, "", "", 50%);
+                @include display(block);
+                @include margin-auto;
+                @include width-height($width-xl + $width-min + 20px, $width-xl + 35px);
+                @include border($border-xxl, solid, $white, "");
+                transform: translate(-50%, -50%);
+                z-index: $zet-md-plus;
+                .video {
+                    width: 500px !important;
+                    iframe {
+                        @include width-height($width-xl + $width-min, $width-xl + 15px);
+                    }
+                }
+                .exit {
+                    @include position(absolute, -1*$pos-lg, -1*$pos-lg, $bottom, $left);
+                    @include color-background("", $light-alter-color);
+                    padding: $padding-reg $padding-md;
+                    font-size: $fsize-stand;
+                    z-index: $zet-lg;
+                    i {
+                        @include width-height(100%, 100%);
+                    }
+                    &:hover {
+                        @include color-background("", $almost-open);
+                    }
+                }
+            }
+        }
+        @media screen and (min-width:$breakpoint-middle) {
+            .overlay {
+                @include display(none);
+                .video__wrapper {
+                    @include margin-auto;
+                    @include width-height(720px, 335px);
+                    @include border($border-xxl, solid, $white, "");
+                    z-index: $zet-md-plus;
+                    .video {
+                        iframe {
+                            @include width-height(700px, 315px);
+                        }
+                    }
+                    .exit {
+                        @include position(absolute, -1*$pos-lg, -1*$pos-lg, "", "");
+                        @include color-background("", $light-alter-color);
+                        padding: $padding-reg $padding-md;
+                        font-size: $fsize-xs*2;
+                        z-index: $zet-big;
+                        transition: $fast-transition;
+                        i {
+                            @include width-height(100%, 100%);
+                        }
+                        &:hover {
+                            @include color-background("", $almost-open);
+                        }
+                    }
+                }
+            }
+        }
+        .media__href {
+            &:hover {
+                cursor: pointer;
+            }
+            .media__img {
+                @include width-height(100%, "");
+            }
+        }
+    }
+}

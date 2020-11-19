@@ -1,0 +1,27 @@
+.brands__owl-carousel {
+    @include position(relative, "", "", "", "");
+    @include color-background("", $super-light-color);
+    padding: $padding-xl 0;
+    .owl-carousel {
+        .item {
+            @include width-height($width-lg, 100%);
+            @include overflow(hidden);
+            margin: 0 $margin-md*3;
+            img {
+                @include width-height(100%, 100%);
+                object-fit: cover;
+            }
+        }
+        .owl-dots {
+            @include margin-auto;
+            .active {
+                span {
+                    @include color-background("", $main-color);
+                    &:focus {
+                        border: none !important;
+                    }
+                }
+            }
+        }
+    }
+}

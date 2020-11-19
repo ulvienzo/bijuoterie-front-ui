@@ -1,0 +1,141 @@
+//-----------------------------------------------//
+//====================COLOR======================//
+//-----------------------------------------------//
+$black:black;
+$white:white;
+//---General
+$main-color:#DE784C;
+$main-color-light:#d6b98d;
+$main-dark-color:#060606;
+$super-light-color:rgb(250, 250, 250);
+//---Background Colors
+$second-bg:#333;
+$second-btn:#ebebeb;
+$third-bg:#171717;
+$dark-alter-color:rgba(10, 10, 10, 0.45);
+$open-dark:rgba(0, 0, 0, 0.164);
+$light-alter-color:rgba(255, 255, 255, 0.5);
+$almost-open: rgba(255, 255, 255, 0.85);
+$label-color:#969696;
+//---Text Colors
+$main-icon-color:#444;
+$secondary-iconics:#3f3f41;
+$navigation-light:#dedede;
+$rating: #e7ce1f;
+//-----------------------------------------------//
+//=============MEDIA-QUERIES=====================//
+//-----------------------------------------------//
+$breakpoint-middle:800px;
+$breakpoint-central:1100px;
+$breakpoint-regular:1260px;
+//-----------------------------------------------//
+//=============POSITIONS=========================//
+//-----------------------------------------------//
+//---Position
+$position-main:relative;
+$position-free:absolute;
+$position-glue:fixed;
+//---Positional Distances
+$pos-xs:2px;
+$pos-sm:3px;
+$pos-md:5px;
+$pos-lg:$pos-md*2;
+$pos-xl:$pos-md*5;
+$position-super:$pos-xl*4;
+//-----------------------------------------------//
+//=============BOX-SHADOW========================//
+//-----------------------------------------------//
+//---Shadow Coloring
+$alpha-min:rgba(0, 0, 0, 0.05);
+$alpha-mid:rgba(0, 0, 0, 0.1);
+$alpha-strong:rgba(0, 0, 0, 0.205);
+//---Shadows
+$shadow-none:0px;
+$shadow-xs:1px;
+$shadow-sm:2px;
+$shadow-md:5px;
+$shadow-lg:$shadow-md*2;
+//---Combined Shadows
+$shadow-md: $shadow-none $shadow-none $shadow-sm $shadow-xs $alpha-strong;
+$shadow:$shadow-none $shadow-none $shadow-md $shadow-sm $alpha-min;
+$shadow-wide:$shadow-none $shadow-none $shadow-lg $shadow-md $alpha-mid;
+//-----------------------------------------------//
+//===================SIZING======================//
+//-----------------------------------------------//
+//---Padding
+$padding-xs:2px;
+$padding-min:3px;
+$padding-reg:5px;
+$padding-md:$padding-reg*2; //10
+$padding-md-plus:15px;
+$padding-lg:$padding-reg*5; //25
+$padding-xl:$padding-lg*2; //50
+//---Margin
+$margin-xs:2px;
+$margin-min:3px;
+$margin-reg:5px;
+$margin-md:$margin-reg*2;
+$margin-lg:$margin-reg*5;
+$margin-lg-plus:30px;
+$margin-xl:$margin-lg*2;
+//---Width
+$width-xs:25px;
+$width-min:50px;
+$width-md:100px;
+$width-md-plus:150px;
+$width-lg:200px;
+$width-xl:300px;
+//---Height
+$height-xs:25px;
+$height-min:50px;
+$height-md:100px;
+$height-md-plus:150px;
+$height-lg:200px;
+//-----------------------------------------------//
+//====================BORDER======================//
+//-----------------------------------------------//
+//---Width
+$border-width-sm: 1px;
+$border-width-md: 2px;
+$border-width-lg: 3px;
+$border-xxl:10px;
+//---Color
+$main-border-color: white;
+$sm_link-border-color: #979797;
+$view-border-color: #ccc;
+//---Radius
+$border-radius-sm: 2px;
+$border-radius-md: 3px;
+$border-radius-lg: $border-radius-sm*2;
+$border-radius-half: 50%;
+//-----------------------------------------------//
+//===================TRANSITION==================//
+//-----------------------------------------------//
+$trans-property-main:all;
+//---Time
+$min-sec:0.1s;
+$regular-sec:0.3s;
+$lazy-sec:0.5s;
+//---Timing Function
+$main-movement:ease;
+$secondary-movement:ease-in;
+//---Combined Transitions
+$fast-transition:$trans-property-main $min-sec $main-movement;
+$standart-transition:$trans-property-main $regular-sec $main-movement;
+$lazy-transition:$trans-property-main $lazy-sec $main-movement;
+//-----------------------------------------------//
+//===================Z-INDEX=====================//
+//-----------------------------------------------//
+$zet-starter:1;
+$zet-sm:3;
+$zet-norm:30;
+$zet-md:333;
+$zet-md-plus:555;
+$zet-lg:777;
+$zet-big:1000;
+//-----------------------------------------------//
+//================OPACITY========================//
+//-----------------------------------------------//
+$opacity-low:0.2;
+$opacity-half:0.5;
+$opacity-high:0.7;
